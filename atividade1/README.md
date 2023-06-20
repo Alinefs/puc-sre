@@ -1,6 +1,6 @@
 # Atividade 1
 
-Você deverá alterar o arquivo atividade1/Dockerfile de forma que:
+Você deverá corrigir o arquivo atividade1/Dockerfile de forma que:
 
 * Executando o comando `./01_build.sh jenkins <SEU_NOME>`, o docker deve ser capaz de construir a **imagem puc-sre/jenkins:latest** , alcançando os seguintes objetivos:
     *   Ter um resultado final similar do jenkins
