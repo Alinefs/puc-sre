@@ -47,7 +47,7 @@ COPY config/jenkins.telemetry.Correlator.xml ${JENKINS_HOME}/
 COPY config/set_jenkins_env.groovy ${JENKINS_HOME}/
 
 #Moving files
-RUN mv ${JENKINS_HOM}/set_jenkins_env.groovy ${JENKINS_REF_PATH}/init.groovy.d/
+RUN mv ${JENKINS_HOME}/set_jenkins_env.groovy ${JENKINS_REF_PATH}/init.groovy.d/
 RUN chown root. ${JENKINS_HOME} -R
 
 LABEL maintainer=${AUTOR}
@@ -56,4 +56,4 @@ EXPOSE 80/tcp
 
 WORKDIR ${JENKINS_HOME}
 
-#CMD [ "tail" "-f" "${JENKINS_HOME}/logs/log" ]
+CMD [ "tail", "-f", "${JENKINS_HOME}/logs/log" ]
